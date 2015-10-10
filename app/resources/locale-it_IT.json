@@ -1,4 +1,17 @@
 {
-    "test": "TEST magnifico",
+    "views.sections.about": "Chi siamo",
+    "views.sections.services": "Categorie",
+    "views.sections.faq": "Domande frequenti",
+    "views.index.business": "Area aziende",
+    "views.index.search" : "Ricerca",
+    "views.footer.copyright": "Copyright piro84 2015",
+    "views.index.step1.title": "Cerca un servizio",
+    "views.index.step1.description":"",
+    "views.index.step2.title": "Ricevi diversi preventivi",
+    "views.index.step2.description":"",
+    "views.index.step3.title": "Scegli l'offerta che fa per te",
+    "views.index.step3.description":"",
+    "views.about.contact.title" : "Contatti",
+    "views.about.team.title": "Team",
     "directives.language-select.Language": "Lingua"
 }

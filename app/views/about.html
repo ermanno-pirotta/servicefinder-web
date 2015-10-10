@@ -1,1 +1,116 @@
-<p>This is the about view.</p>
+
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">{{ "views.sections.about" | translate }}</h1>
+		<ol class="breadcrumb">
+			<li><a ng-href="#/">Home</a></li>
+			<li class="active">{{ "views.sections.about" | translate }}</li>
+		</ol>
+	</div>
+</div>
+<!-- /.row -->
+
+<!-- Intro Content -->
+<div class="row">
+	<div class="col-md-6">
+		<img class="img-responsive" src="http://placehold.it/750x450" alt="">
+	</div>
+	<div class="col-md-6">
+		<h2>{{ "views.about.details.title" | translate}}</h2>
+		<p>{{ "views.about.details.line1.description" | translate}}</p>
+		<p>{{ "views.about.details.line2.description" | translate}}</p>
+		<p>{{ "views.about.details.line3.description" | translate}}</p>
+	</div>
+</div>
+<!-- /.row -->
+
+<!-- Team Members -->
+<div class="row">
+	<div class="col-lg-12">
+		<h2 class="page-header">{{ "views.about.team.title" | translate}}</h2>
+	</div>
+	<div class="col-md-4 text-center">
+		<div class="thumbnail">
+			<img class="img-responsive" src="http://placehold.it/750x450" alt="">
+			<div class="caption">
+				<h3>
+					{{ "views.about.team.member1.title" | translate}}<br> <small>{{ "views.about.team.member1.jobtitle"
+						| translate}}</small>
+				</h3>
+				<p>{{ "views.about.team.member1.description" | translate}}</p>
+				<ul class="list-inline">
+					<li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
+					</li>
+					<li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 text-center">
+		<div class="thumbnail">
+			<img class="img-responsive" src="http://placehold.it/750x450" alt="">
+			<div class="caption">
+				<h3>
+					{{ "views.about.team.member2.title" | translate}}<br> <small>{{ "views.about.team.member2.jobtitle"
+						| translate}}</small>
+				</h3>
+				<p>{{ "views.about.team.member2.description" | translate}}</p>
+				<ul class="list-inline">
+					<li><a href="#"><i class="fa fa-2x fa-facebook-square"></i></a>
+					</li>
+					<li><a href="#"><i class="fa fa-2x fa-linkedin-square"></i></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- /.row -->
+<hr>
+
+<!-- contact us -->
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">{{ "views.about.contact.title" |
+			translate }}</h1>
+	</div>
+</div>
+
+<div class="row">
+	<!-- Map Column -->
+	<div class="col-md-8">
+		<!-- Embedded Google Map -->
+		<iframe width="100%" height="400px" frameborder="0" scrolling="no"
+			marginheight="0" marginwidth="0"
+			src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+	</div>
+	<!-- Contact Details Column -->
+	<div class="col-md-4">
+		<h3>{{ "views.about.contact.details" | translate }}</h3>
+		<p>
+			{{ "views.about.contact.address.line1" | translate }}<br>{{ "views.about.contact.address.line2"
+			| translate }}, {{ "views.about.contact.province" | translate }}
+			{{ "views.about.contact.postalcode" | translate }}<br>
+		</p>
+		<p>
+			<i class="fa fa-phone"></i> <abbr title="Phone">P</abbr>: (123)
+			456-7890
+		</p>
+		<p>
+			<i class="fa fa-envelope-o"></i> <abbr title="Email">E</abbr>: <a
+				href="mailto:{{ "views.about.contact.email" | translate }}">{{ "views.about.contact.email"
+				| translate }}</a>
+		</p>
+		<ul class="list-unstyled list-inline list-social-icons">
+			<li><a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+			</li>
+			<li><a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+			</li>
+			<li><a href="#"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+			<li><a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+			</li>
+		</ul>
+	</div>
+</div>

@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name servicefinderWebApp.controller:MainCtrl
+ * @name servicefinderWebApp.controller:AboutCtrl
  * @description
- * # MainCtrl
+ * # AboutCtrl
  * Controller of the servicefinderWebApp
  */
 angular.module('servicefinderWebApp')
-  .controller('MainCtrl', function () {
-   
+  .controller('ServiceCtrl', function () {
+    
   });
