@@ -8,6 +8,6 @@
  * Controller of the servicefinderWebApp
  */
 angular.module('servicefinderWebApp')
-  .controller('ServiceCtrl', function () {
-    
-  });
+  .controller('CategoryCtrl', ['$scope','Categories',function ($scope, Categories) {
+	  $scope.categories = Categories.query();
+  }]);

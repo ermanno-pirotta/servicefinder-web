@@ -17,7 +17,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'pascalprecht.translate',// angular-translate
-    'tmh.dynamicLocale'// angular-dynamic-locale
+    'tmh.dynamicLocale',// angular-dynamic-locale
+    'categoryService'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -37,9 +38,9 @@ angular
         controllerAs: 'faq'
       })
       .when('/services', {
-          templateUrl: 'views/services.html',
-          controller: 'ServiceCtrl',
-          controllerAs: 'services'
+          templateUrl: 'views/categories.html',
+          controller: 'CategoryCtrl',
+          controllerAs: 'categories'
         })
       .otherwise({
         redirectTo: '/'
@@ -59,6 +60,11 @@ angular
   .config(function (tmhDynamicLocaleProvider) {
     tmhDynamicLocaleProvider.localeLocationPattern('bower_components/angular-i18n/angular-locale_{{locale}}.js');
   })
+  .config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }
+  ])
   .constant('LOCALES', {
     'locales': {
          'it_IT':'Italiano'
