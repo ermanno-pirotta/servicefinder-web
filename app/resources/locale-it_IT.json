@@ -15,5 +15,6 @@
     "views.index.step3.description":"Confronta i preventivi e scegli l'offerta migliore!",
     "views.about.contact.title" : "Contatti",
     "views.about.team.title": "Team",
-    "directives.language-select.Language": "Lingua"
+    "directives.language-select.Language": "Lingua",
+    "views.common.learnmore": "Dettagli"
 }

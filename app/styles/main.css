@@ -46,10 +46,6 @@ body {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
 
 /* Supporting marketing content */
 .marketing {
@@ -82,3 +78,34 @@ body {
   }
 }
 
+.category{
+	text-transform: uppercase;
+}
+
+.services{
+	text-align: left;
+	list-style: none;
+}
+
+.services li{
+	display: block;
+}
+
+.home-panel{
+	min-height: 200px;
+}
+
+.home-button{
+	position: absolute;
+	bottom: 50px;
+	left: 35%;
+}
+
+.angucomplete-holder{
+	display: inline-block;
+	width: 90%;
+}
+
+.angucomplete-holder input{
+	width: 100% !important;
+}

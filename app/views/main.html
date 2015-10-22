@@ -1,30 +1,33 @@
 
 <div class="jumbotron" style="margin-top:40px;background: url('images/banner.jpg') no-repeat center center; background-size: cover;">
 	<div class="container">
-		<form>
 			<div class="well">
-				<h4>{{"views.index.search.professional" | translate }}</h4>
-				<h4>{{"views.index.search" | translate }}</h4>
-				<div class="input-group">
-					<input type="text" class="form-control" placeholder='{{"views.index.search.question" |translate }}'>
-					 <span class="input-group-btn">
-						<button class="btn btn-default" type="button">
-							<i class="fa fa-search"></i>
-						</button>
-					</span>
-				</div>
-				<!-- /.input-group -->
+				<form class="form-inline" role="form">
+						<h4>{{"views.index.search.professional" | translate }}</h4>
+						<h4>{{"views.index.search" | translate }}</h4>
+							<angucomplete-alt id="ex1"
+							  placeholder='{{"views.index.search.question" |translate }}'
+				              pause="100"
+				              selected-object="selectedService"
+				              local-data="suggestions"
+				              search-fields="hint"
+				              title-field="hint"
+				              minlength="1"
+				              input-class="form-control"></angucomplete-alt>
+								<button class="btn btn-sm btn-default" type="button">
+									<i class="fa fa-fw fa-search"></i>
+							</button>
+				</form>
 			</div>
-		</form>
 	</div>
 </div>
 
 <div class="row">
 	<div class="col-md-4">
-		<div class="panel panel-default">
+		<div class="panel panel-default home-panel">
 			<div class="panel-heading">
 				<h4>
-					<i class="fa fa-fw fa-check"></i> {{"views.index.step1.title" |
+					<i class="fa fa-fw fa-search"></i> {{"views.index.step1.title" |
 					translate }}
 				</h4>
 			</div>
@@ -34,10 +37,10 @@
 		</div>
 	</div>
 	<div class="col-md-4">
-		<div class="panel panel-default">
+		<div class="panel panel-default home-panel">
 			<div class="panel-heading">
 				<h4>
-					<i class="fa fa-fw fa-gift"></i> {{"views.index.step2.title" |
+					<i class="fa fa-fw fa-file-text-o"></i> {{"views.index.step2.title" |
 					translate }}
 				</h4>
 			</div>
@@ -47,10 +50,10 @@
 		</div>
 	</div>
 	<div class="col-md-4">
-		<div class="panel panel-default">
+		<div class="panel panel-default home-panel">
 			<div class="panel-heading">
 				<h4>
-					<i class="fa fa-fw fa-compass"></i> {{"views.index.step3.title" |
+					<i class="fa fa-fw fa-check"></i> {{"views.index.step3.title" |
 					translate }}
 				</h4>
 			</div>
@@ -71,63 +74,20 @@
 		<h2 class="page-header">{{"views.sections.services" |
 			translate }}</h2>
 	</div>
-	<div class="col-md-3 col-sm-6">
-		<div class="panel panel-default text-center">
+	<div class="col-md-3 col-sm-6" ng-repeat="category in categories"  ng-controller="MainCtrl">
+		<div class="panel panel-default text-center home-panel">
 			<div class="panel-heading">
-				<span class="fa-stack fa-5x"> <i
+				<span class="fa-stack fa-5x category"> <i
 					class="fa fa-circle fa-stack-2x text-primary"></i> <i
 					class="fa fa-tree fa-stack-1x fa-inverse"></i>
+					{{category.name}}
 				</span>
 			</div>
 			<div class="panel-body">
-				<h4>Service One</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<a href="#" class="btn btn-primary">Learn More</a>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<div class="panel panel-default text-center">
-			<div class="panel-heading">
-				<span class="fa-stack fa-5x"> <i
-					class="fa fa-circle fa-stack-2x text-primary"></i> <i
-					class="fa fa-car fa-stack-1x fa-inverse"></i>
-				</span>
-			</div>
-			<div class="panel-body">
-				<h4>Service Two</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<a href="#" class="btn btn-primary">Learn More</a>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<div class="panel panel-default text-center">
-			<div class="panel-heading">
-				<span class="fa-stack fa-5x"> <i
-					class="fa fa-circle fa-stack-2x text-primary"></i> <i
-					class="fa fa-support fa-stack-1x fa-inverse"></i>
-				</span>
-			</div>
-			<div class="panel-body">
-				<h4>Service Three</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<a href="#" class="btn btn-primary">Learn More</a>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<div class="panel panel-default text-center">
-			<div class="panel-heading">
-				<span class="fa-stack fa-5x"> <i
-					class="fa fa-circle fa-stack-2x text-primary"></i> <i
-					class="fa fa-database fa-stack-1x fa-inverse"></i>
-				</span>
-			</div>
-			<div class="panel-body">
-				<h4>Service Four</h4>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-				<a href="#" class="btn btn-primary">Learn More</a>
+				<p>{{category.description}}</p>
+				<div class="home-button">
+					<a ng-href="#services" class="btn btn-primary">{{"views.common.learnmore" | translate}}</a>
+				</div>
 			</div>
 		</div>
 	</div>

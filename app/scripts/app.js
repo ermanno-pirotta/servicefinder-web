@@ -17,8 +17,10 @@ angular
     'ngSanitize',
     'ngTouch',
     'pascalprecht.translate',// angular-translate
-    'tmh.dynamicLocale',// angular-dynamic-locale
-    'categoryService'
+    'tmh.dynamicLocale',// angular-dynamic-locale,
+    'angucomplete-alt',
+    'categoryService',
+    'suggestionService'
 ])
   .config(function ($routeProvider) {
     $routeProvider
