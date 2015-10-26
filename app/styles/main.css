@@ -78,10 +78,6 @@ body {
   }
 }
 
-.category{
-	text-transform: uppercase;
-}
-
 .services{
 	text-align: left;
 	list-style: none;
@@ -108,4 +104,8 @@ body {
 
 .angucomplete-holder input{
 	width: 100% !important;
+}
+
+.services label{
+	padding-left:1em;
 }

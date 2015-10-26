@@ -1,0 +1,39 @@
+
+<div class="row">
+	<div class="col-lg-12">
+		<form role="form" ng-controller="RequestCtrl">
+			  <div class="form-group">
+			    <label for="name">{{"views.request.name" | translate }}</label>
+			    <input type="text" class="form-control" id="name">
+			  </div>
+			  <div class="form-group">
+			    <label for="surname">{{"views.request.surname" | translate }}</label>
+			    <input type="text" class="form-control" id="surname">
+			  </div>
+			  <div class="form-group">
+			    <label for="email">{{"views.request.email" | translate }}</label>
+			    <input type="email" class="form-control" id="email">
+			  </div>
+			  <div class="form-group">
+			    <label for="phone">{{"views.request.phone" | translate }}</label>
+			    <input type="tel" class="form-control" id="phone">
+			  </div>
+			  <div class="form-group">
+			    <label for="city">{{"views.request.city" | translate }}</label>
+			    <input type="text" class="form-control" id="city">
+			  </div>
+			  <div class="form-group">
+			    <label for="city">{{"views.request.postalcode" | translate }}</label>
+			    <input type="number" class="form-control" id="postalcode">
+			  </div>
+			  <div class="form-group">
+			    <label for="description">{{"views.request.description" | translate }}</label>
+			    <textarea rows="4" cols="50" class="form-control" id="description"></textarea>
+			  </div>
+			  <!--  <div class="checkbox">
+			    <label><input type="checkbox"> Remember me</label>
+			  </div> -->
+			  <button type="submit" class="btn btn-default" ng-click="doRequest()">{{"views.request.submit" | translate}}</button>
+		</form>
+	</div>
+</div>

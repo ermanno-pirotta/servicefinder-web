@@ -20,7 +20,8 @@ angular
     'tmh.dynamicLocale',// angular-dynamic-locale,
     'angucomplete-alt',
     'categoryService',
-    'suggestionService'
+    'suggestionService',
+    'dataService'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -44,6 +45,11 @@ angular
           controller: 'CategoryCtrl',
           controllerAs: 'categories'
         })
+       .when('/request', {
+          templateUrl: 'views/request.html',
+          controller: 'RequestCtrl',
+          controllerAs: 'request'
+        }) 
       .otherwise({
         redirectTo: '/'
       });

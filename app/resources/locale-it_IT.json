@@ -16,5 +16,13 @@
     "views.about.contact.title" : "Contatti",
     "views.about.team.title": "Team",
     "directives.language-select.Language": "Lingua",
-    "views.common.learnmore": "Dettagli"
+    "views.common.learnmore": "Dettagli",
+    "views.request.name" : "Nome",
+    "views.request.surname" : "Cognome",
+    "views.request.submit" : "OK",
+    "views.request.city": "Città",
+    "views.request.postalcode": "CAP",
+    "views.request.description": "Descrizione",
+    "views.request.email": "Email",
+    "views.request.phone": "Telefono"
 }
