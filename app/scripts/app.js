@@ -21,7 +21,8 @@ angular
     'angucomplete-alt',
     'categoryService',
     'suggestionService',
-    'dataService'
+    'dataService',
+    'requestService'
 ])
   .config(function ($routeProvider) {
     $routeProvider

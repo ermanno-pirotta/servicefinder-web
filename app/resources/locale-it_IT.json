@@ -24,5 +24,6 @@
     "views.request.postalcode": "CAP",
     "views.request.description": "Descrizione",
     "views.request.email": "Email",
-    "views.request.phone": "Telefono"
+    "views.request.phone": "Telefono",
+    "views.sections.request": "Richiesta nuovo preventivo"
 }
