@@ -2,7 +2,7 @@
 
 //http://stackoverflow.com/questions/18880737/how-do-i-use-rootscope-in-angular-to-store-variables
 angular.module('servicefinderWebApp')
-.controller('RequestCtrl', ['$scope','RequestData','RequestService',function ($scope, RequestData, RequestService) {
+.controller('RequestCtrl', ['$scope','$location','RequestData','RequestService',function ($scope, $location, RequestData, RequestService) {
 	
 	$scope.category = RequestData.getCategory();
 	$scope.services = RequestData.getServices();
@@ -14,7 +14,8 @@ angular.module('servicefinderWebApp')
 		
 		if(requestJson.categoryName && requestJson.requestedService){
 			RequestService.save(requestJson, function(successData){
-				console.debug(successData);
+				//console.debug(successData);
+				$location.path('/thankyou');
 			},
 			function(errorData){
 				console.debug(errorData);

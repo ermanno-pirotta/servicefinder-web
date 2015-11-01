@@ -50,7 +50,12 @@ angular
           templateUrl: 'views/request.html',
           controller: 'RequestCtrl',
           controllerAs: 'request'
-        }) 
+        })
+        .when('/thankyou', {
+        templateUrl: 'views/thankyou.html',
+        controller: 'StaticContentCtrl',
+        controllerAs: 'thankyou'
+      })
       .otherwise({
         redirectTo: '/'
       });

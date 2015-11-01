@@ -25,5 +25,9 @@
     "views.request.description": "Descrizione",
     "views.request.email": "Email",
     "views.request.phone": "Telefono",
-    "views.sections.request": "Richiesta nuovo preventivo"
+    "views.sections.request": "Richiesta nuovo preventivo",
+    "views.sections.thankyou": "Grazie!",
+    "views.thankyou.line1": "La tua richiesta é stata ricevuta correttamente. I migliori professionisti della zona ti contatteranno per eventuali chiarimenti e ti forniranno dei preventivi gratuiti e senza impegno",
+	"views.thankyou.line2": "Grazie per aver usato il nostro servizio, puoi continuare e richiedere altri preventivi cliccando il seguente ",
+	"views.common.link": "link"
 }
