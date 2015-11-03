@@ -109,3 +109,7 @@ body {
 .services label{
 	padding-left:1em;
 }
+
+.accordion-toggle{
+	cursor: pointer;
+}
