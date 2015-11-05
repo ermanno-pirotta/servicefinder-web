@@ -6,7 +6,7 @@
 			{{"views.sections.services" | translate}}
 		</h1>
 		<ol class="breadcrumb">
-			<li><a ng-href="#/">Home</a></li>
+			<li><a ui-sref="user.home">Home</a></li>
 			<li class="active">{{"views.sections.services" | translate}}</li>
 		</ol>
 	</div>
@@ -26,7 +26,7 @@
 			<div class="panel-body">
 				<ul class="services">
 					<li ng-repeat="service in category.services">
-						<a ng-href="#/request" ng-click="addToRequest()">{{service}}</a>
+						<a ui-sref="user.request" ng-click="addToRequest()">{{service}}</a>
 					</li>
 				</ul>
 			</div>

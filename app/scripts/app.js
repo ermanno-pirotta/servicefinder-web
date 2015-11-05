@@ -13,7 +13,6 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
     'ngSanitize',
     'ngTouch',
     'pascalprecht.translate',// angular-translate
@@ -22,44 +21,92 @@ angular
     'categoryService',
     'suggestionService',
     'dataService',
-    'requestService'
+    'requestService',
+    'ui.router'
 ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'StaticContentCtrl',
-        controllerAs: 'about'
-      })
-      .when('/faq', {
-        templateUrl: 'views/faq.html',
-        controller: 'StaticContentCtrl',
-        controllerAs: 'faq'
-      })
-      .when('/services', {
-          templateUrl: 'views/categories.html',
-          controller: 'CategoryCtrl',
-          controllerAs: 'categories'
+
+.run(
+  [          '$rootScope', '$state', '$stateParams',
+    function ($rootScope,   $state,   $stateParams) {
+
+    // It's very handy to add references to $state and $stateParams to the $rootScope
+    // so that you can access them from any scope within your applications.For example,
+    // <li ng-class="{ active: $state.includes('contacts.list') }"> will set the <li>
+    // to active whenever 'contacts.list' or one of its decendents is active.
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+    }
+  ]
+)
+
+.config(
+    function ($stateProvider,   $urlRouterProvider) {
+	  //
+	  // For any unmatched url, redirect to /state1
+	  $urlRouterProvider.otherwise("/user/home");
+	  
+	  $stateProvider
+	  	.state('user', {
+	      url: "/user",
+	      templateUrl: "views/user/layout.html"
+	    })
+	    .state('user.home', {
+	      url: "/home",
+	      templateUrl: "views/user/home.html",
+	      controller: 'MainCtrl'
+	    })
+	    .state('user.about', {
+	      url: "/about",
+	      templateUrl: 'views/user/about.html'
+	    })
+	    .state('user.faq', {
+	    	url:"/faq",
+	        templateUrl: 'views/user/faq.html'
+	    })
+	    .state('user.services', {
+    	  url:"/services",
+          templateUrl: 'views/user/categories.html',
+          controller: 'CategoryCtrl'
         })
-       .when('/request', {
-          templateUrl: 'views/request.html',
-          controller: 'RequestCtrl',
-          controllerAs: 'request'
+       .state('user.request', {
+    	   url:"/request",
+    	   templateUrl: 'views/user/request.html',
+    	   controller: 'RequestCtrl'
         })
-        .when('/thankyou', {
-        templateUrl: 'views/thankyou.html',
-        controller: 'StaticContentCtrl',
-        controllerAs: 'thankyou'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  })
+        .state('user.thankyou', {
+        	url:"/thankyou",
+	        templateUrl: 'views/user/thankyou.html'
+        })
+        
+        .state('business', {
+        	url:"/business",
+	        templateUrl: 'views/business/layout.html',
+        })
+        .state('business.home', {
+        	url:"/home",
+	        templateUrl: 'views/business/home.html'
+        })
+        
+        .state('business.home.register', {
+        	url:"/register",
+	        templateUrl: 'views/business/register.html'
+        })
+        
+        .state('business.login', {
+        	url:"/login",
+	        templateUrl: 'views/business/login.html'
+        })
+        
+        .state('backoffice', {
+        	url:"/backoffice",
+	        templateUrl: 'views/backoffice/layout.html'
+        })
+        .state('backoffice.home', {
+        	url:"/home",
+	        templateUrl: 'views/backoffice/home.html'
+        })
+    })
+
   .config(function ($translateProvider) {
     $translateProvider.useMissingTranslationHandlerLog();
   })
