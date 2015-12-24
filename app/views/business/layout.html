@@ -13,13 +13,14 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" ui-sref="user.home">POC</a>
+				<a class="navbar-brand" ui-sref="business.home">POC</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse"
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a ui-sref="business.login">{{"views.index.login" | translate }}</a></li>
+					<li><a ui-sref="user.home">{{"views.index.user" | translate }}</a></li>
+					<li><a ui-sref="business.register">{{"views.index.register" | translate }}</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -28,8 +29,8 @@
 	</nav>
 
 	<div class="container">
-	<div ui-view></div>
-</div>
+		<div ui-view></div>
+	</div>
 
 <!-- Footer -->
  <footer>

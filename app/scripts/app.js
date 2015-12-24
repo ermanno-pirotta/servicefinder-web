@@ -19,6 +19,7 @@ angular
     'tmh.dynamicLocale',// angular-dynamic-locale,
     'angucomplete-alt',
     'categoryService',
+    'businessService',
     'suggestionService',
     'dataService',
     'requestService',
@@ -87,14 +88,14 @@ angular
 	        templateUrl: 'views/business/home.html'
         })
         
-        .state('business.home.register', {
+        .state('business.register', {
         	url:"/register",
 	        templateUrl: 'views/business/register.html'
         })
         
-        .state('business.login', {
-        	url:"/login",
-	        templateUrl: 'views/business/login.html'
+        .state('business.registrationsuccess', {
+        	url:"/registrationsuccess",
+	        templateUrl: 'views/business/registrationsuccess.html'
         })
         
         .state('backoffice', {
@@ -105,6 +106,8 @@ angular
         	url:"/home",
 	        templateUrl: 'views/backoffice/home.html'
         })
+        
+        
     })
 
   .config(function ($translateProvider) {

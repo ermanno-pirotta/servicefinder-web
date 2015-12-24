@@ -113,3 +113,15 @@ body {
 .accordion-toggle{
 	cursor: pointer;
 }
+
+.margin-top{
+	margin-top:2em;
+}
+
+.registration-form.services {
+	padding: 0;
+}
+
+.registration-form.services li input{
+	margin: 10px;
+}

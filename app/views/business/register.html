@@ -1,0 +1,93 @@
+
+<div class="row">
+	<div class="col-xs-12 col-md-8 col-md-offset-2">
+		<h1>{{"views.business.register" | translate}}</h1>
+		<div ng-controller="BusinessRegistrationController">
+			<ul class="nav rc-nav-wizard">
+				<li class="active"><a class="active" href="#first"
+					data-toggle="tab"> <span class="badge">1</span> <span>{{"views.business.register.step.first"| translate}}</span>
+				</a></li>
+				<li><a href="#second" data-toggle="tab"> <span
+						class="badge">2</span> <span>{{"views.business.register.step.second"| translate}}</span>
+				</a></li>
+				<li><a href="#last" data-toggle="tab"> <span class="badge">3</span>
+						<span>{{"views.business.register.step.third"| translate}}</span>
+				</a></li>
+			</ul>
+			<div class="tab-content" >
+				<form class="tab-pane active" id="first" name="firstForm" data-step="first">
+					<div>
+						<label class="control-label">{{"views.business.register.name" | translate}}</label> 
+						<input name="name" class="form-control" type="text" required
+							ng-model="fields.name" />
+					</div>
+					<div>
+						<label class="control-label">{{"views.business.register.fiscalCode" | translate }}</label>
+						 <input name="fiscalCode" class="form-control" type="text" required
+							ng-model="fields.fiscalCode" />
+					</div>
+					<div>
+						<label class="control-label">{{"views.request.email" | translate }}</label> 
+						<input type="email" class="form-control" ng-model="fields.email" required>
+					</div>
+					<div>
+						<label class="control-label">{{"views.request.phone" | translate }}</label> 
+						<input type="tel" class="form-control" ng-model="fields.phone" required>
+					</div>
+				</form>
+				<form class="tab-pane" id="second" name="secondForm" data-step="second">
+					<div>
+						<label class="control-label">{{"views.business.register.address" | translate}}</label>
+						 <input
+							name="address" class="form-control" type="text"
+							ng-model="fields.address" />
+					</div>
+					<div class="form-group">
+						<label class="control-label">{{"views.request.city" | translate}}</label> 
+						<input name="city"
+							class="form-control" type="text" ng-model="fields.city" required/>
+					</div>
+					<div class="form-group">
+						<label class="control-label">{{"views.request.postalcode" | translate }}</label> 
+						<input name="state"
+							class="form-control" type="text" ng-model="fields.postalCode" required/>
+					</div>
+					<div class="form-group">
+						<label class="control-label">{{"views.business.register.travelRangeInKm" | translate }}</label> 
+						<input name="travelRangeInKm"
+							class="form-control" type="number" ng-model="fields.travelRangeInKm" required/>
+					</div>
+				</form>
+				<form class="tab-pane" id="last" name="lastForm" data-step="third">
+					<div>
+						<label class="control-label">{{"views.request.category" | translate }}</label> 
+						<select class="form-control" ng-model="fields.category" 
+								ng-options="item as item.name for item in categories track by item.name"
+								ng-change="displayServicesForCategory(fields.category)">
+						</select>
+					</div>
+					<div>
+						<label class="control-label">{{"views.request.services" | translate }}</label> 
+						<ul class="services registration-form">
+							<li ng-repeat="service in category.services">
+								<input type="checkbox"
+								       value="{{service}}">{{service}} </input>
+							</li>
+						</ul>
+					</div>
+				</form>
+			</div>
+			<div class="margin-top">
+				<div class="pull-right">
+					<a class="btn btn-default" ng-click="back()"
+						ng-show="currentStateIndex > 0">{{"views.common.back" | translate }}</a>
+					<a class="btn btn-primary" data-loading-text="..."
+						ng-click="next()"
+						ng-show="currentStateIndex < navigationLength">{{"views.common.next" | translate }}</a>
+					<a class="btn btn-primary" ng-click="completeWizard()"
+						ng-show="currentStateIndex == navigationLength"> {{"views.request.submit" | translate}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
