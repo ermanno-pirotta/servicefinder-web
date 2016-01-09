@@ -1,0 +1,115 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    var PAYMILL_PUBLIC_KEY = '7408370210512553de9476325da10314';
+    var VALIDATE_CVC = true;
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://bridge.paymill.com/"></script>
+<script type="text/javascript">
+    $.noConflict();
+
+    jQuery(document).ready(function ($) {
+        var doc = document;
+        var body = $( doc.body );
+
+        $('.card-number').keyup(function() {
+            var detector = new BrandDetection();
+            var brand = detector.detect($('.card-number').val());
+            //$(".card-number")[0].className = $(".card-number")[0].className.replace(/paymill-card-number-.*/g, '');
+            if (brand !== 'unknown') {
+                //$('#card-number').addClass("paymill-card-number-" + brand);
+
+                /*if (!detector.validate($('.card-number').val())) {
+                    $('#card-number').addClass("paymill-card-number-grayscale");
+                }*/
+
+                if (brand !== 'maestro') {
+                    VALIDATE_CVC = true;
+                } else {
+                    VALIDATE_CVC = false;
+                }
+            }
+        });
+
+        $('.card-expiry').keyup(function() {
+            if ( /^\d\d$/.test( $('.card-expiry').val() ) ) {
+                text = $('.card-expiry').val();
+                $('.card-expiry').val(text += "/");
+            }
+        });
+
+
+        
+    });
+</script>
+<div class="row">
+
+
+<div id="payment-form" class="col-xs-12 col-md-6 col-md-offset-3">
+    <form role="form" id="payment-form" ng-controller="PaymentCtrl"  ng-submit="submit()">
+        <div class="payment-form-header container-fluid">
+            <!--  <h1 class="">{{"views.payment.title" | translate}}</h1>-->
+            <h4>{{"views.payment.description" | translate}}</h4>
+            <h4 class="col-md-6">{{"views.payment.accepted" | translate}}</h4>
+            <ul class="credit-cards col-md-6">
+            		<li>
+            			<img src="images/visa.png">
+            		</li>
+            		<li>
+            			<img src="images/mastercard.png">
+            		</li>
+            		<li>
+            			<img src="images/maestro.png">
+            		</li>
+            		<li>
+            			<img src="images/amex.png">
+            		</li>
+            	</ul>
+        </div>
+         
+        <div class="alert alert-danger payment_errors" role="alert" ng-messages="paymentError" ng-show="paymentError">
+		  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+		  <span ng-message="invalidCardHolder">
+		  {{"views.payment.errors.invalidCardHolder" | translate}}
+		  </span>
+		  <span ng-message="invalidCardCVC">
+		  {{"views.payment.errors.invalidCardCVC" | translate}}
+		  </span>
+		   <span ng-message="invalidCardNumber">
+		   {{"views.payment.errors.invalidCardNumber" | translate}}
+		   </span>
+		   <span ng-message="invalidCardExpirityDate">
+		   {{"views.payment.errors.invalidCardExpirityDate" | translate}}
+		   </span>
+		   <span ng-message="apiError">{{apiErrorMessage}}</span>
+		</div>
+        <div class="form-group">
+            <label for="card-number" >{{"views.payment.cardnumber" | translate}}</label>
+            <input id ="card-number" class="form-control card-number" type="text" placeholder="**** **** **** ****" maxlength="19" required>
+        </div>
+        <div class="form-group">
+            <label for="card-expiry" >{{"views.payment.cardexpiry" | translate}}</label>
+            <input id="card-expiry" class="form-control card-expiry" type="text" placeholder='{{"views.payment.cardexpiry.placeholder" | translate}}' maxlength="7" required>
+        </div>
+        <div class="form-group">
+            <label for="card-holdername" >{{"views.payment.cardholder" | translate}}</label>
+            <input id="card-holdername" class="form-control card-holdername" type="text" required>
+            </div>
+        <div class="form-group">
+            <label for="card-cvc" >CVC &nbsp;<span class="card-cvc-label"></span><span id="tooltip" title="">?</span></label>
+            <input id="card-cvc" class="form-control card-cvc" type="text" placeholder="CVC" maxlength="4" required>
+        </div>
+        <div class="form-group">
+            <label for="amount" >{{"views.payment.amount" | translate}}</label>
+            <input id="amount" class="form-control amount" type="text" value='{{"views.payment.amount.value" | translate}}' name="amount" disabled>
+        </div>
+        <div class="form-group">
+            <label for="currency" >{{"views.payment.currency" | translate}}</label>
+            <input id="currency" class="form-control currency" type="text" value='{{"views.payment.currency.value" | translate}}' disabled name="currency">
+        </div>
+        <div class="form-group pull-right">
+            <button id="paymill-submit-button" class="submit-button btn btn-primary" type="submit" ng-disabled="$scope.paymentError">{{ "views.request.submit" | translate }}</button>
+        </div>
+    </form>
+</div>
+</div>

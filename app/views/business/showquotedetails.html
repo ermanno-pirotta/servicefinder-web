@@ -1,0 +1,17 @@
+<!-- Page Heading/Breadcrumbs -->
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">
+		{{ "views.sections.request" | translate }}
+		</h1>
+	</div>
+</div>
+<!-- /.row -->
+<div class="row container-fluid" ng-controller="AcceptQuoteCtrl">
+	<div class="col-md-8 col-xs-8">
+		<p>{{ "views.business.showQuoteDetails.line1" | translate }} {{ quote.requestedServices[0] }}</p>
+		<p>{{ "views.business.showQuoteDetails.line2" | translate }}</p>
+	</div>
+</div>
+
+<ng-include src="'/views/business/quotedata.html'"></ng-include>

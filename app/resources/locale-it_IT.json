@@ -49,6 +49,26 @@
 	"views.request.category": "Categoria",
 	"views.request.services": "Servizi",
 	"views.registrationsuccess.thankyou.line1": "La registrazione é avvenuta con successo!",
-	"views.registrationsuccess.thankyou.line2": "Riceverai una email gratuitamente per ogni richiesta di servizio da parte degli utenti, e potrai poi decidere se rispondere o meno. A presto!"
-	
+	"views.registrationsuccess.thankyou.line2": "Riceverai una email gratuitamente per ogni richiesta di servizio da parte degli utenti, e potrai poi decidere se rispondere o meno. A presto!",
+	"views.business.showQuoteSummary.line1" : "Ciao, hai ricevuto una richiesta di preventivo per il servizio di ",
+	"views.business.showQuoteSummary.line2" : "Per visualizzare tutti i dettagli della richiesta, clicca sul pulsante accetta.",
+	"views.business.showQuoteDetails.line1" : "Nella tabella sottostante puoi trovare tutti i dettagli della richiesta per il servizio di ",
+	"views.business.showQuoteDetails.line2" : "Grazie per aver usato il nostro servizio, a presto!",
+	"views.sections.request.accept": "Accetta",
+	"views.sections.request.discard": "No grazie",
+	"views.payment.cardnumber": "Numero della carta",
+	"views.payment.cardexpiry": "Data di scadenza",
+	"views.payment.cardholder": "Nome e cognome del titolare",
+	"views.payment.amount": "Ammontare",
+	"views.payment.currency" :  "Valuta",
+	"views.payment.currency.value" : "EUR",
+	"views.payment.title" : "Pagamento",
+	"views.payment.cardexpiry.placeholder": "MM / AA",
+	"views.payment.amount.value" : "10.00",
+	"views.payment.description" : "Inserisci i dati della tua carta di credito per il pagamento e clicca su invia.",
+	"views.payment.accepted" : "Carte accettate: ",
+	"views.payment.errors.invalidCardHolder": "Dati del titolare non validi",
+	"views.payment.errors.invalidCardCVC" : "Codice CVC non valido",
+	"views.payment.errors.invalidCardNumber" : "Numero di carta non valido",  
+	"views.payment.errors.invalidCardExpirityDate" : "Data di scadenza non valida" 
 }

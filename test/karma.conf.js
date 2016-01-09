@@ -39,6 +39,7 @@ module.exports = function(config) {
       'bower_components/angucomplete-alt/angucomplete-alt.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/jquery-1.11.3.min/index.js',
+      'bower_components/angular-messages/angular-messages.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

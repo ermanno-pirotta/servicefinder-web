@@ -125,3 +125,20 @@ body {
 .registration-form.services li input{
 	margin: 10px;
 }
+
+.credit-cards{
+	list-style: none;
+	float: right;
+}
+
+.credit-cards li{
+	float: left;
+}
+
+.credit-cards li img{
+	height: 32px;
+}
+
+.payment-form-header h4{
+	padding: 0;
+}

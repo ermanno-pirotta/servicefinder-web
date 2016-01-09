@@ -23,7 +23,9 @@ angular
     'suggestionService',
     'dataService',
     'requestService',
-    'ui.router'
+    'paymentService',
+    'ui.router',
+    'ngMessages'
 ])
 
 .run(
@@ -107,7 +109,24 @@ angular
 	        templateUrl: 'views/backoffice/home.html'
         })
         
+        .state('business.showquoteforacceptance', {
+        	url:"/showquotedetails/:businessId/:quoteCreationTimestamp",
+	        templateUrl: 'views/business/showquotesummary.html',
+	        controller: 'AcceptQuoteCtrl'
+        })
         
+        .state('business.paymentform', {
+        	url:"/showquotedetails/:businessId/:quoteCreationTimestamp/payment",
+	        templateUrl: 'views/business/paymentform.html',
+	        controller: 'PaymentCtrl'
+        })
+        
+        .state('business.paymentsuccess', {
+        	params: {quote: {}},
+        	url:"/showquotedetails/paymentsuccess",
+	        templateUrl: 'views/business/showquotedetails.html',
+	        controller: 'AcceptQuoteCtrl'
+        })
     })
 
   .config(function ($translateProvider) {
