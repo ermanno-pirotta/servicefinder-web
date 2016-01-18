@@ -1,7 +1,7 @@
 
-<div class="jumbotron" style="margin-top:40px;background: url('images/banner.jpg') no-repeat center center; background-size: cover;">
-	<div class="container">
-			<div class="well">
+<div class="jumbotron user-home-image" >
+	<div class="">
+			<!--  <div class="well">
 				<form class="form-inline" role="form">
 						<h4>{{"views.index.search.professional" | translate }}</h4>
 						<!--  <h4>{{"views.index.search" | translate }}</h4>
@@ -16,71 +16,57 @@
 				              input-class="form-control"></angucomplete-alt>
 								<button class="btn btn-sm btn-default" type="button">
 									<i class="fa fa-fw fa-search"></i>
-							</button>-->
+							</button>
 				</form>
-			</div>
+			</div> -->
 	</div>
 </div>
 
-<div class="row">
+<div class="row container-fluid center-text home-section">
 	<div class="col-md-4">
-		<div class="panel panel-default home-panel">
-			<div class="panel-heading">
-				<h4>
-					<i class="fa fa-fw fa-search"></i> {{"views.index.step1.title" |
-					translate }}
-				</h4>
-			</div>
-			<div class="panel-body">
-				<p>{{"views.index.step1.description" | translate }}</p>
-			</div>
-		</div>
+			<span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">{{"views.index.step1.title" |
+					translate }}</h4>
+           	<p class="text-muted">{{"views.index.step1.description" | translate }}</p>
 	</div>
 	<div class="col-md-4">
-		<div class="panel panel-default home-panel">
-			<div class="panel-heading">
-				<h4>
-					<i class="fa fa-fw fa-file-text-o"></i> {{"views.index.step2.title" |
-					translate }}
-				</h4>
-			</div>
-			<div class="panel-body">
-				<p>{{"views.index.step2.description" | translate }}</p>
-			</div>
-		</div>
+			<span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-file-text-o fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">{{"views.index.step2.title" | translate }}</h4>
+           	<p class="text-muted">{{"views.index.step2.description" | translate }}</p>
 	</div>
 	<div class="col-md-4">
-		<div class="panel panel-default home-panel">
-			<div class="panel-heading">
-				<h4>
-					<i class="fa fa-fw fa-check"></i> {{"views.index.step3.title" |
-					translate }}
-				</h4>
-			</div>
-			<div class="panel-body">
-				<p>{{"views.index.step3.description" | translate }}</p>
-			</div>
-		</div>
+		<span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="service-heading">{{"views.index.step3.title" | translate }}</h4>
+           	<p class="text-muted">{{"views.index.step3.description" | translate }}</p>
 	</div>
 </div>
 <!-- /.row -->
 
 <!-- Service Panels -->
-<div class="row">
+<div class="row container-fluid bg-light-gray home-section">
 	<div class="col-lg-12">
-		<h2 class="page-header">{{"views.sections.services" |
-			translate }}</h2>
+		<h1 class="center-text">{{"views.sections.services" |
+			translate }}</h1>
 	</div>
 	<div class="col-md-3 col-sm-6" ng-repeat="category in categories"  ng-controller="MainCtrl">
-		<div class="panel panel-default text-center home-panel">
-			<div class="panel-heading">
+		<div class="text-center home-panel">
+			<div class="">
 				<h4>
 					{{category.name}}
 				<h4>
 			</div>
-			<div class="panel-body">
+			<div class="">
 				<p>{{category.description}}</p>
-				<div class="home-button">
+				<div class="">
 					<a ui-sref="user.services" class="btn btn-primary">{{"views.common.learnmore" | translate}}</a>
 				</div>
 			</div>

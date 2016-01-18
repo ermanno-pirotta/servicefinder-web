@@ -127,6 +127,13 @@ angular
 	        templateUrl: 'views/business/showquotedetails.html',
 	        controller: 'AcceptQuoteCtrl'
         })
+        
+        .state('business.rejectquote', {
+        	params: {quote: {}},
+        	url:"/showquotedetails/rejectquote",
+	        templateUrl: 'views/business/rejectquote.html',
+	        controller: 'AcceptQuoteCtrl'
+        })
     })
 
   .config(function ($translateProvider) {

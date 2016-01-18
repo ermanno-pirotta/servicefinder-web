@@ -10,4 +10,8 @@ angular.module('servicefinderWebApp')
 	  $scope.goToPayment = function(){
 		  $state.go("business.paymentform", $stateParams);
 	  }
+	  
+	  $scope.goToRejectQuote = function(){
+		  $state.go("business.rejectquote", $stateParams);
+	  }
   }]);

@@ -69,7 +69,6 @@ angular.module('servicefinderWebApp')
   
   $scope.register = function(fields){
 	  Business.save(fields, function(successData){
-		 console.debug(successData);
 		 $state.go('business.registrationsuccess');
 	  });
   }

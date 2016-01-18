@@ -70,5 +70,10 @@
 	"views.payment.errors.invalidCardHolder": "Dati del titolare non validi",
 	"views.payment.errors.invalidCardCVC" : "Codice CVC non valido",
 	"views.payment.errors.invalidCardNumber" : "Numero di carta non valido",  
-	"views.payment.errors.invalidCardExpirityDate" : "Data di scadenza non valida" 
+	"views.payment.errors.invalidCardExpirityDate" : "Data di scadenza non valida",
+	"views.about.contact.details": "Passaparola",
+	"views.about.contact.address.line1": "Ufficio Regus",
+	"views.about.contact.address.line2": "Piazzale Biancamano, 8",
+	"views.about.contact.province" : "Milano",
+	"views.about.contact.postalcode": "20121"
 }

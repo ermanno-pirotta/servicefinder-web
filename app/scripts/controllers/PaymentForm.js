@@ -12,11 +12,11 @@ angular.module('servicefinderWebApp')
           } else {
               
               var paymentData = {
-             	"businessId" : $stateParams.businessId,
+             	"quoteTimestamp" : $stateParams.quoteCreationTimestamp,
              	"token"		 :result.token
               }
               
-              PaymentService.pay($stateParams.quoteCreationTimestamp, paymentData)
+              PaymentService.pay($stateParams.businessId, paymentData)
               .then(function successCallback(response) {
             	  $state.go("business.paymentsuccess", {quote: response.data});  
         	  }, function errorCallback(response) {

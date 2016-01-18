@@ -1,67 +1,63 @@
 <!-- Page Heading/Breadcrumbs -->
 <div class="row">
 	<div class="col-lg-12">
-		<h1 class="page-header">
-			{{"views.sections.faq" | translate }}		</h1>
 		<ol class="breadcrumb">
 			<li> <a ui-sref="user.home">Home</a></li>
 			<li class="active">{{ "views.sections.faq" | translate }}</li>
 		</ol>
 	</div>
 </div>
-<div class="row">
-	<div class="col-lg-12">
-		<div class="panel-group" id="accordion">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title accordion-toggle" data-toggle="collapse"
-							data-parent="#accordion" data-target="#collapseOne">
-									Quanto costa il servizio?
-					</h4>
-				</div>
-				<div id="collapseOne" class="panel-collapse collapse">
-					<div class="panel-body">Il servizio é assolutamente gratuito.</div>
-				</div>
-			</div>
-			<!-- /.panel -->
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title accordion-toggle" data-toggle="collapse"
-							data-parent="#accordion" data-target="#collapseTwo">
-						I miei dati personali saranno accessibili pubblicamente?
-					</h4>
-				</div>
-				<div id="collapseTwo" class="panel-collapse collapse">
-					<div class="panel-body">I dati che inserirai ai fini della richiesta del preventivo saranno condivisi solo con i professionisti che ti invieranno un preventivo. Tutti gli altri vedranno solamente gli estremi generici della richiesta.</div>
-				</div>
-			</div>
-			<!-- /.panel -->
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title accordion-toggle"   data-toggle="collapse"
-							data-parent="#accordion" data-target="#collapseThree">
-						Perché vi serve sapere il mio indirizzo?
-					</h4>
-				</div>
-				<div id="collapseThree" class="panel-collapse collapse">
-					<div class="panel-body">Il tuo indirizzo ci serve per poter inviare la tua richiesta solamente ai professionisti della tua zona.</div>
-				</div>
-			</div>
-			<!-- /.panel -->
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h4 class="panel-title accordion-toggle" data-toggle="collapse"
-							data-parent="#accordion" data-target="#collapseFour">
-						Sono obbligato a scegliere uno dei preventivi che mi proponete?
-					</h4>
-				</div>
-				<div id="collapseFour" class="panel-collapse collapse">
-					<div class="panel-body">Assolutamente no! Se nessuno dei preventivi ti soddisfa, sei libero di non sceglierne alcuno.</div>
-				</div>
-			</div>
-			<!-- /.panel -->
-		</div>
-		<!-- /.panel-group -->
-	</div>
+<div class="row inner-content">
+	<ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-info-sign"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Quanto costa il servizio?</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Il servizio é gratuito.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-info-sign"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">I miei dati personali saranno accessibili pubblicamente?</h4>
+            </div>
+            <div class="timeline-body">
+              <p>I dati che inserirai ai fini della richiesta del preventivo saranno condivisi solo con i professionisti che ti invieranno un preventivo. Tutti gli altri vedranno solamente gli estremi generici della richiesta.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-info-sign"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Perché vi serve sapere il mio indirizzo?</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Il tuo indirizzo ci serve per poter inviare la tua richiesta solamente ai professionisti della tua zona.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-info-sign"></i></div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Sono obbligato a scegliere uno dei preventivi che mi proponete?</h4>
+            </div>
+            <div class="timeline-body">
+              <p>Assolutamente no! Se nessuno dei preventivi ti soddisfa, sei libero di non sceglierne alcuno</p>
+            </div>
+          </div>
+        </li>
+    </ul>
 </div>
-<!-- /.col-lg-12 -->
+
+<script type="text/javascript" >
+$('.timeline-panel').click(function() {
+    $('.timeline-body', this).toggle(); // p00f
+});
+</script>

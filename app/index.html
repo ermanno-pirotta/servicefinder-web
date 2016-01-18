@@ -10,6 +10,8 @@
 <!-- bower:css -->
 <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 <link rel="stylesheet" href="bower_components/angucomplete-alt/angucomplete-alt.css" />
+<link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.css" />
+<link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.css" />
 <!-- endbower -->
 <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
 <!-- build:css(.tmp) styles/main.css -->
@@ -24,11 +26,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-	<div class="container">
-		<div ui-view></div>
-	</div>
-
-	<hr>
+	<div ui-view></div>
 
 	<!-- build:js(.) scripts/vendor.js -->
 	<!-- bower:js -->
@@ -50,12 +48,14 @@
 	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 	<script src="bower_components/jquery-1.11.3.min/index.js"></script>
 	<script src="bower_components/angular-messages/angular-messages.js"></script>
+	<script src="bower_components/ng-dialog/js/ngDialog.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
 
 	<!-- build:js({.tmp,app}) scripts/scripts.js -->
 	<script src="scripts/app.js"></script>
+	<script src="scripts/domcustomisation.js" ></script>
 	<script src="scripts/controllers/main.js"></script>
 	<script src="scripts/controllers/category.js"></script>
 	<script src="scripts/controllers/request.js"></script>
