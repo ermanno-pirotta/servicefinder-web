@@ -1,38 +1,58 @@
-
+<div class="row">
+	<div class="col-lg-12">
+		<ol class="breadcrumb">
+			<li> <a ui-sref="business.home">Home</a></li>
+			<li class="active">{{ "views.sections.register" | translate }}</li>
+		</ol>
+	</div>
+</div>
 <div class="row">
 	<div class="col-xs-12 col-md-8 col-md-offset-2">
 		<h1>{{"views.business.register" | translate}}</h1>
 		<div ng-controller="BusinessRegistrationController">
 			<ul class="nav rc-nav-wizard">
-				<li class="active"><a class="active" href="#first"
+				<li class="active"><a class="active" href=""
 					data-toggle="tab"> <span class="badge">1</span> <span>{{"views.business.register.step.first"| translate}}</span>
 				</a></li>
-				<li><a href="#second" data-toggle="tab"> <span
+				<li><a href="" data-toggle="tab"> <span
 						class="badge">2</span> <span>{{"views.business.register.step.second"| translate}}</span>
 				</a></li>
-				<li><a href="#last" data-toggle="tab"> <span class="badge">3</span>
+				<li><a href="" data-toggle="tab"> <span class="badge">3</span>
 						<span>{{"views.business.register.step.third"| translate}}</span>
 				</a></li>
 			</ul>
 			<div class="tab-content" >
-				<form class="tab-pane active" id="first" name="firstForm" data-step="first">
+				<form class="tab-pane active" id="first" name="firstForm" data-step="first" novalidate ng-submit="" >
 					<div>
-						<label class="control-label">{{"views.business.register.name" | translate}}</label> 
+						<label class="control-label">{{"views.business.register.name" | translate}}*</label> 
 						<input name="name" class="form-control" type="text" required
-							ng-model="fields.name" />
+							ng-model="fields.name" ng-class="{ 'has-error': firstForm.name.$touched && firstForm.name.$invalid }">
+							<div class="error-message" role="alert" ng-messages="firstForm.name.$error" ng-show="firstForm.name.$touched">
+								<div ng-messages-include="errormessages.html"></div>
+							</div>
 					</div>
 					<div>
-						<label class="control-label">{{"views.business.register.fiscalCode" | translate }}</label>
-						 <input name="fiscalCode" class="form-control" type="text" required
-							ng-model="fields.fiscalCode" />
+						<label class="control-label">{{"views.business.register.fiscalCode" | translate }}*</label>
+						 <input name="fiscalCode" class="form-control" type="number" required ng-minlength="11" ng-maxlength="11"
+							ng-model="fields.fiscalCode" ng-class="{ 'has-error': firstForm.fiscalCode.$touched && firstForm.fiscalCode.$invalid }">
+							
+						<div class="error-message" role="alert" ng-messages="firstForm.fiscalCode.$error" ng-show="firstForm.fiscalCode.$touched">
+							 <div ng-messages-include="errormessages.html"></div>
+						</div>
 					</div>
 					<div>
-						<label class="control-label">{{"views.request.email" | translate }}</label> 
-						<input type="email" class="form-control" ng-model="fields.email" required>
+						<label class="control-label">{{"views.request.email" | translate }}*</label> 
+						<input name="email" type="email" class="form-control" ng-model="fields.email" required ng-class="{ 'has-error': firstForm.email.$touched && firstForm.email.$invalid }">
+						<div class="error-message" role="alert" ng-messages="firstForm.email.$error" ng-show="firstForm.email.$touched">
+								<div ng-messages-include="errormessages.html"></div>
+							</div>
 					</div>
 					<div>
-						<label class="control-label">{{"views.request.phone" | translate }}</label> 
-						<input type="tel" class="form-control" ng-model="fields.phone" required>
+						<label class="control-label">{{"views.request.phone" | translate }}*</label> 
+						<input name="phone" type="number" class="form-control" ng-model="fields.phone" required ng-minlength="7" ng-class="{ 'has-error': firstForm.phone.$touched && firstForm.phone.$invalid }">
+						<div class="error-message" role="alert" ng-messages="firstForm.phone.$error" ng-show="firstForm.phone.$touched">
+							<div ng-messages-include="errormessages.html"></div>
+						</div>
 					</div>
 				</form>
 				<form class="tab-pane" id="second" name="secondForm" data-step="second">
@@ -43,28 +63,40 @@
 							ng-model="fields.address" />
 					</div>
 					<div class="form-group">
-						<label class="control-label">{{"views.request.city" | translate}}</label> 
+						<label class="control-label">{{"views.request.city" | translate}}*</label> 
 						<input name="city"
 							class="form-control" type="text" ng-model="fields.city" required/>
+						<div class="error-message" role="alert" ng-messages="secondForm.city.$error" ng-show="secondForm.city.$touched">
+							<div ng-messages-include="errormessages.html"></div>
+						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label">{{"views.request.postalcode" | translate }}</label> 
-						<input name="state"
-							class="form-control" type="text" ng-model="fields.postalCode" required/>
+						<label class="control-label">{{"views.request.postalcode" | translate }}*</label> 
+						<input name="postalCode"
+							class="form-control" type="number" ng-model="fields.postalCode" required ng-minlength="5" ng-maxlength="5"/>
+						<div class="error-message" role="alert" ng-messages="secondForm.postalCode.$error" ng-show="secondForm.postalCode.$touched">
+							<div ng-messages-include="errormessages.html"></div>
+						</div>
 					</div>
 					<div class="form-group">
-						<label class="control-label">{{"views.business.register.travelRangeInKm" | translate }}</label> 
+						<label class="control-label">{{"views.business.register.travelRangeInKm" | translate }}*</label> 
 						<input name="travelRangeInKm"
 							class="form-control" type="number" ng-model="fields.travelRangeInKm" required/>
+						<div class="error-message" role="alert" ng-messages="secondForm.travelRangeInKm.$error" ng-show="secondForm.travelRangeInKm.$touched">
+							<div ng-messages-include="errormessages.html"></div>
+						</div>
 					</div>
 				</form>
 				<form class="tab-pane" id="last" name="lastForm" data-step="third">
 					<div>
-						<label class="control-label">{{"views.request.category" | translate }}</label> 
-						<select class="form-control" ng-model="fields.category" 
+						<label class="control-label">{{"views.request.category" | translate }}*</label> 
+						<select name="category" class="form-control" ng-model="fields.category" 
 								ng-options="item as item.name for item in categories track by item.name"
-								ng-change="displayServicesForCategory(fields.category)">
+								ng-change="displayServicesForCategory(fields.category)" required>
 						</select>
+						<div class="error-message" role="alert" ng-messages="lastForm.category.$error" ng-show="lastForm.category.$touched">
+							<div ng-messages-include="errormessages.html"></div>
+						</div>
 					</div>
 					<div>
 						<label class="control-label">{{"views.request.services" | translate }}</label> 

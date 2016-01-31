@@ -137,12 +137,6 @@ body {
 	padding: 0;
 }
 
-.user-home-image{
-	height: 400px; 
-	background: url('../images/banner.jpg') no-repeat center center; 
-	background-size: cover;
-}
-
 .navbar{
 	border-bottom: 1px solid #405067;
 }
@@ -170,6 +164,8 @@ nav.inverse a:hover, nav.inverse a:active, nav.inverse a:selected{
 
 .center-text{
 	text-align: center;
+	align-items: center;
+	justify-content: center;
 }
 
 .bg-light-gray{
@@ -331,4 +327,53 @@ nav.inverse a:hover, nav.inverse a:active, nav.inverse a:selected{
 .inner-content{
 	padding-left: 5%;
 	padding-right: 5%;
+}
+
+.request-form{
+	width: 70%;
+	margin: auto;
+}
+
+.body-content{
+	height: 100%;
+}
+
+footer {
+    height: 3em;
+    width: 100%;
+}
+
+.business-home-page{
+	height: 100%;
+	color: #fff;
+}
+
+.user-home-image{
+	height: 400px; 
+	background: url('../images/banner.jpg') no-repeat center top; 
+	background-size: cover;
+	display: flex;
+	color: #fff;
+}
+
+.business-home-image{
+	background: url('../images/business-home.jpg') no-repeat center top; 
+	background-size: cover;
+	height: 400px;
+	display: flex;
+}
+
+.user-home-banner{
+	background-color: #205081;
+	/* RGBa with 0.6 opacity */
+	background: rgba(32, 80, 129, 0.8);
+	padding: 1em;
+}
+
+.has-error{
+	border-color: red;
+}
+
+.error-message{
+	color: red;
 }

@@ -59,13 +59,29 @@ angular.module('servicefinderWebApp')
   }
   
   $scope.next = function(){
-	  if($scope.currentStateIndex < $scope.navigationLength){
+	  var currentForm = $scope.getCurrentForm();
+	  if(!currentForm.$valid){
+		  $scope.highlightInvalidFields(currentForm);
+	  }
+	  else if($scope.currentStateIndex < $scope.navigationLength){
 		  this.saveState();
 		  hideStep($scope.currentStateIndex);
 		  $scope.currentStateIndex++;  
 		  showStep($scope.currentStateIndex);
 	  }
   };
+  
+  $scope.highlightInvalidFields = function(currentForm){
+	  angular.forEach(currentForm.$error, function(error) {
+		  angular.forEach(error, function(field) {
+			    field.$setTouched();
+			  });
+	  });
+  }
+  
+  $scope.getCurrentForm = function(){
+	  return $scope[$(states[$scope.currentStateIndex]).attr("name")];
+  }
   
   $scope.register = function(fields){
 	  Business.save(fields, function(successData){
@@ -74,8 +90,14 @@ angular.module('servicefinderWebApp')
   }
   
   $scope.completeWizard = function() {
-	  prepareFieldsForRegistration(this.fields);
-	  $scope.register(this.fields);
+	  var currentForm = $scope.getCurrentForm();
+	  if(!currentForm.$valid){
+		  $scope.highlightInvalidFields(currentForm);
+	  }
+	  else{
+		  prepareFieldsForRegistration(this.fields);
+		  $scope.register(this.fields);
+	  }
   }
   
   $scope.displayServicesForCategory = function(category){

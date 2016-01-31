@@ -14,12 +14,12 @@
 <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
 <div class="row" ng-controller="CategoryCtrl">
 	<div class="col-md-12" ng-repeat="category in categories">
-		<div class="text-center" ng-class-odd="'bg-light-gray'" style="padding:10px">
-			<div style="padding:10px;" >
+		<div class="text-center" ng-class-even="'bg-light-gray'" style="padding:10px">
+			<!-- <div style="padding:10px;" >
 				<h4>
 					{{category.name}}
 				</h4>
-			</div>
+			</div> -->
 			<div class="">
 				<ul class="services">
 					<li ng-repeat="service in category.services">

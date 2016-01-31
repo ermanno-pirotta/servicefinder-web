@@ -1,6 +1,6 @@
 {
     "views.sections.about": "Chi siamo",
-    "views.sections.services": "Categorie",
+    "views.sections.services": "Servizi",
     "views.sections.faq": "Domande frequenti",
     "views.index.business": "Area aziende",
     "views.index.search.professional": "Trova il professionista che fa a caso tuo!",
@@ -75,5 +75,18 @@
 	"views.about.contact.address.line1": "Ufficio Regus",
 	"views.about.contact.address.line2": "Piazzale Biancamano, 8",
 	"views.about.contact.province" : "Milano",
-	"views.about.contact.postalcode": "20121"
+	"views.about.contact.postalcode": "20121",
+	"view.business.home.line1": "Non cercare clienti, fai si che siano loro a venire da te!",
+	"view.business.home.step1.title": "Registrati",
+	"view.business.home.step1.description": "La registrazione é GRATUITA e senza impegno",
+	"view.business.home.step2.title": "Ricevi richieste di preventivo",
+	"view.business.home.step2.description": "Ricevi richieste di preventivo relative ai servizi da te offerti per email.",
+	"view.business.home.step3.title": "Paghi solo se ti interessa",
+	"view.business.home.step3.description": "Paga comodamente con carta di credito solo per i preventivi che reputi interessanti per il tuo business.",
+	"views.sections.register" : "Registrazione",
+	"view.user.home.line1" : "Problemi legali? Fai una richiesta di preventivo gratuitamente ai migliori avvocati della tua zona!",
+	"views.common.form.errors.required": "Campo obbligatorio",
+	"views.common.form.errors.email.invalid": "Email non valida",
+	"views.common.form.errors.tooshort": "Valore inserito troppo corto",
+	"views.common.form.errors.toolong": "Valore inserito troppo lungo"
 }

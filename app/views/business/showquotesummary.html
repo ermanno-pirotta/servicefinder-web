@@ -1,6 +1,6 @@
 <!-- Page Heading/Breadcrumbs -->
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-md-10 col-md-offset-1">
 		<h1 class="page-header">
 		{{ "views.sections.request" | translate }}
 		</h1>
@@ -8,19 +8,19 @@
 </div>
 <!-- /.row -->
 <div class="row container-fluid" ng-controller="AcceptQuoteCtrl">
-	<div class="col-md-8 col-xs-8">
+	<div class="col-md-8 col-md-offset-1 col-xs-8">
 		<p>{{ "views.business.showQuoteSummary.line1" | translate }} {{ quote.requestedServices[0] }}.</p>
 		<p>{{ "views.business.showQuoteSummary.line2" | translate }}</p>
 	</div>
-	<div class="col-md-2 col-xs-2">
+	<div class="col-md-1 col-xs-2">
 		  <button type="button" class="btn btn-default btn-success" ng-click="goToPayment()">
 		  	<span class="glyphicon glyphicon-ok"></span> <label class="hidden-xs hidden-sm"> {{ "views.sections.request.accept" | translate }}</label>
 		 </button>
 	</div>
 	<div class="col-md-2 col-xs-2">
-		  <button type="button" class="btn btn-default btn-danger" ng-click="goToRejectQuote()">
+		  <!--<button type="button" class="btn btn-default btn-danger" ng-click="goToRejectQuote()">
 		  	<span class="glyphicon glyphicon-remove"></span> <label class="hidden-xs hidden-sm">{{ "views.sections.request.discard" | translate }}</label>
-		  </button>
+		  </button> -->
 	</div>
 </div>
 
